@@ -48,8 +48,7 @@
       <ul class="slider-track" id="sliderTrack">
         <li class="slide">
           <div class="slide-photo">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.4"/></svg>
-            <span class="slot-file">slide-01-cartoes.jpg</span>
+            <img class="slide-img" src="slide-01-cartao.png" alt="Cartões de visita com acabamento fosco e cantos arredondados">
           </div>
           <div class="slide-caption">
             <span class="eyebrow" style="color:#fff"><span class="regmark" style="color:#fff"></span> 01 / Papelaria</span>
@@ -59,8 +58,7 @@
         </li>
         <li class="slide">
           <div class="slide-photo">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.4"/></svg>
-            <span class="slot-file">slide-02-cardapios.jpg</span>
+            <img class="slide-img" src="slide-02-cardapio.png" alt="Cardápio de restaurante plastificado">
           </div>
           <div class="slide-caption">
             <span class="eyebrow" style="color:#fff"><span class="regmark" style="color:#fff"></span> 02 / Sinalização</span>
@@ -70,8 +68,7 @@
         </li>
         <li class="slide">
           <div class="slide-photo">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.4"/></svg>
-            <span class="slot-file">slide-03-camisetas.jpg</span>
+            <img class="slide-img" src="slide-03-camisas.png" alt="Camisetas estampadas para equipe">
           </div>
           <div class="slide-caption">
             <span class="eyebrow" style="color:#fff"><span class="regmark" style="color:#fff"></span> 03 / Estamparia</span>
@@ -81,8 +78,7 @@
         </li>
         <li class="slide">
           <div class="slide-photo">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.4"/></svg>
-            <span class="slot-file">slide-04-canecas.jpg</span>
+            <img class="slide-img" src="slide-04-caneca.png" alt="Canecas personalizadas por sublimação">
           </div>
           <div class="slide-caption">
             <span class="eyebrow" style="color:#fff"><span class="regmark" style="color:#fff"></span> 04 / Sublimação</span>
@@ -140,6 +136,28 @@
     </div>
   </div>
 
+  <!-- VIDEO BANNER -->
+  <section class="video-banner" id="videoBanner" aria-label="Vídeo institucional">
+    <video class="video-banner-media" id="bannerVideo" autoplay muted loop playsinline preload="metadata" poster="video-banner-poster.png">
+      <source src="https://youtu.be/0g3vmDx2lIY?si=icylHlysDoe41qCO" type="video/mp4">
+    </video>
+    <div class="video-banner-overlay"></div>
+    <div class="video-banner-content">
+      <span class="eyebrow" style="color:#fff"><span class="regmark" style="color:#fff"></span> Por dentro da produção</span>
+      <h2>Veja a gráfica<br>em movimento</h2>
+      <p>Do arquivo aprovado à peça pronta — acompanhe o processo de perto.</p>
+      <a href="https://wa.me/258864952265" target="_blank" rel="noopener" class="btn btn-solid">Chamar no WhatsApp</a>
+    </div>
+    <button class="video-toggle" id="videoToggle" aria-label="Pausar vídeo" aria-pressed="false">
+      <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <button class="video-mute" id="videoMute" aria-label="Ativar som" aria-pressed="false">
+      <svg class="icon-muted" viewBox="0 0 24 24" fill="currentColor"><path d="M4 9v6h4l5 5V4L8 9H4z"/><path d="M17 8l4 8M21 8l-4 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="icon-sound" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M4 9v6h4l5 5V4L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+    </button>
+  </section>
+
   <!-- BANNER CAROUSEL -->
   <section class="banner-section" id="banners" aria-label="Destaques e promoções">
     <div class="wrap banner-head">
@@ -150,32 +168,32 @@
       <div class="banner-track" id="bannerTrack">
         <!-- banner 1 -->
         <article class="banner-card">
-          <div class="banner-photo"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">banner-entrega-48h.jpg</span></div>
+          <div class="banner-photo"><img src="banner-entrega-48h.png" alt="Entrega expressa em até 48 horas" loading="lazy"></div>
           <div class="banner-caption"><span class="banner-tag">PRAZO</span><h4>Entrega em até 48h</h4><p>Produção expressa para quem não pode esperar.</p></div>
         </article>
         <!-- banner 2 -->
         <article class="banner-card">
-          <div class="banner-photo"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">banner-sem-minimo.jpg</span></div>
+          <div class="banner-photo"><img src="banner-sem-minimo.png" alt="Pedidos sem quantidade mínima" loading="lazy"></div>
           <div class="banner-caption"><span class="banner-tag">SEM MÍNIMO</span><h4>Pede 1, pede 100</h4><p>Personaliza uma peça só para presentear, sem lote fechado.</p></div>
         </article>
         <!-- banner 3 -->
         <article class="banner-card">
-          <div class="banner-photo"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">banner-prova-digital.jpg</span></div>
+          <div class="banner-photo"><img src="banner-prova-digital.png" alt="Prova digital gratuita antes da impressão" loading="lazy"></div>
           <div class="banner-caption"><span class="banner-tag">SEM SURPRESA</span><h4>Prova digital grátis</h4><p>Você aprova cor, texto e posição antes de rodar a máquina.</p></div>
         </article>
         <!-- banner 4 -->
         <article class="banner-card">
-          <div class="banner-photo"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">banner-pagamento.jpg</span></div>
+          <div class="banner-photo"><img src="banner-pagamento.png" alt="Formas de pagamento facilitadas" loading="lazy"></div>
           <div class="banner-caption"><span class="banner-tag">FACILITADO</span><h4>Paga como for melhor</h4><p>Numerário, transferência ou M-Pesa — à vista ou parcelado.</p></div>
         </article>
         <!-- banner 5 -->
         <article class="banner-card">
-          <div class="banner-photo"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">banner-kits-empresa.jpg</span></div>
+          <div class="banner-photo"><img src="banner-kits-empresa.png" alt="Kits personalizados para empresas" loading="lazy"></div>
           <div class="banner-caption"><span class="banner-tag">PARA EQUIPES</span><h4>Kits para empresas</h4><p>Crachás, camisetas e canecas com a mesma identidade, num pedido só.</p></div>
         </article>
         <!-- banner 6 -->
         <article class="banner-card">
-          <div class="banner-photo"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">banner-retirada-entrega.jpg</span></div>
+          <div class="banner-photo"><img src="banner-retirada-entrega.png" alt="Retirada na loja ou entrega em domicílio" loading="lazy"></div>
           <div class="banner-caption"><span class="banner-tag">LOGÍSTICA</span><h4>Retirada ou entrega</h4><p>Vem buscar na loja ou recebe em casa, em Maputo e arredores.</p></div>
         </article>
       </div>
@@ -188,7 +206,7 @@
       <div class="sec-head">
         <span class="eyebrow">Catálogo de produção</span>
         <h2>Nossos serviços</h2>
-        <p>Organizados por linha de produção — cada categoria tem sua cor de identificação, do jeito que a gente separa as chapas de impressão. Em cada item, reserve os três espaços de foto para o resultado real do trabalho — nada de imagem de banco.</p>
+        <p>Organizados por linha de produção — cada categoria tem sua cor de identificação, do jeito que a gente separa as chapas de impressão.</p>
       </div>
 
       <div class="cat-nav" role="tablist" aria-label="Filtrar categorias">
@@ -215,9 +233,9 @@
             <h4>Cartões de visita</h4>
             <p>Layout exclusivo, papéis especiais, verniz localizado e laminação fosca ou brilho. Frente e verso, cantos retos ou arredondados.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cartao-visita-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cartao-visita-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cartao-visita-03.jpg</span></div>
+              <div class="photo-slot"><img src="cartao-visita-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cartao-visita-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cartao-visita-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -228,9 +246,9 @@
             <h4>Crachás personalizados</h4>
             <p>Para empresas, eventos e escolas — com foto, cargo, QR code e cordão à sua escolha. PVC rígido ou cartão plastificado.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cracha-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cracha-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cracha-03.jpg</span></div>
+              <div class="photo-slot"><img src="cracha-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cracha-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cracha-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -241,9 +259,9 @@
             <h4>Cartões de agradecimento</h4>
             <p>Para clientes, casamentos e eventos especiais — texto e ilustração sob medida, com papel kraft ou couché.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">agradecimento-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">agradecimento-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">agradecimento-03.jpg</span></div>
+              <div class="photo-slot"><img src="agradecimento-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="agradecimento-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="agradecimento-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -265,9 +283,9 @@
             <h4>Cardápio de restaurante</h4>
             <p>Cardápios laminados, resistentes a manuseio, com fotos e organização por categoria. Formato de mesa ou balcão.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cardapio-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cardapio-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cardapio-03.jpg</span></div>
+              <div class="photo-slot"><img src="cardapio-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cardapio-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cardapio-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -278,9 +296,9 @@
             <h4>Indicador de mesa</h4>
             <p>Numeração e identificação de mesas em acabamento tenda, para eventos e salões. Impressão dos dois lados.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">indicador-mesa-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">indicador-mesa-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">indicador-mesa-03.jpg</span></div>
+              <div class="photo-slot"><img src="indicador-mesa-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="indicador-mesa-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="indicador-mesa-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -291,9 +309,9 @@
             <h4>Cartazes & design</h4>
             <p>Criação e impressão de cartazes promocionais, do rascunho da ideia ao arquivo final. Papel comum, couché ou adesivo.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cartaz-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cartaz-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">cartaz-03.jpg</span></div>
+              <div class="photo-slot"><img src="cartaz-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cartaz-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="cartaz-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -315,9 +333,9 @@
             <h4>Estampagem de camisetas</h4>
             <p>Estampa em silk ou DTF, uniformes de empresa, times, eventos ou uso pessoal. Cores sólidas ou degradê, frente e verso.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">camiseta-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">camiseta-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">camiseta-03.jpg</span></div>
+              <div class="photo-slot"><img src="camiseta-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="camiseta-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="camiseta-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -328,9 +346,9 @@
             <h4>Sacolas & camisolas</h4>
             <p>Sacolas personalizadas para lojas e eventos, além de camisolas e regatas sob encomenda, em TNT ou algodão.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">sacola-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">sacola-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">sacola-03.jpg</span></div>
+              <div class="photo-slot"><img src="sacola-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="sacola-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="sacola-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -341,9 +359,9 @@
             <h4>Bonés personalizados</h4>
             <p>Para empresas, equipes e uso pessoal — bordado ou estampa, cores e modelos variados, com ajuste regulável.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">bone-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">bone-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">bone-03.jpg</span></div>
+              <div class="photo-slot"><img src="bone-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="bone-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="bone-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -365,9 +383,9 @@
             <h4>Canecas personalizadas</h4>
             <p>Fotos, frases e logotipos sublimados com alta durabilidade — comuns ou mágicas (efeito térmico), 325ml.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">caneca-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">caneca-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">caneca-03.jpg</span></div>
+              <div class="photo-slot"><img src="caneca-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="caneca-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="caneca-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -378,9 +396,9 @@
             <h4>Squeezes, chaveiros & mais</h4>
             <p>Praticamente qualquer superfície revestida pode receber sua arte via sublimação — squeeze, chaveiro, mousepad e mais.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">squeeze-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">squeeze-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">squeeze-03.jpg</span></div>
+              <div class="photo-slot"><img src="squeeze-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="squeeze-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="squeeze-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div class="card">
@@ -391,9 +409,9 @@
             <h4>Kits corporativos</h4>
             <p>Combine caneca, chaveiro e brindes sublimados num kit exclusivo com a cara da sua marca, pronto para presentear.</p>
             <div class="photo-strip" aria-hidden="true">
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">kit-corporativo-01.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">kit-corporativo-02.jpg</span></div>
-              <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.5"/></svg><span class="slot-file">kit-corporativo-03.jpg</span></div>
+              <div class="photo-slot"><img src="kit-corporativo-01.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="kit-corporativo-02.png" alt="" loading="lazy"></div>
+              <div class="photo-slot"><img src="kit-corporativo-03.png" alt="" loading="lazy"></div>
             </div>
           </div>
         </div>
