@@ -177,3 +177,135 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   // prevent the click on a banner card from firing right after a drag
   track.addEventListener('click', (e) => { if (dragMoved) e.preventDefault(); }, true);
 })();
+// ---------- stories (círculos estilo status do WhatsApp) ----------
+// Para trocar fotos/textos, edite o objeto STORIES abaixo (img = nome do arquivo).
+(function initStories() {
+  const STORIES = {
+    pedidos: {
+      name: 'Pedidos da semana',
+      cover: 'camisa-01.jpg',
+      items: [
+        { img: 'camisa-01.jpg',  title: 'Camisetas estampadas', text: 'Uniformes e estampas saídos esta semana.' },
+        { img: 'caneca-01.jpg',  title: 'Canecas sublimadas',   text: 'Fotos e frases prontas para presentear.' },
+        { img: 'cartao-1.jpg',   title: 'Cartões de visita',    text: 'Acabamento fosco e verniz localizado.' },
+        { img: 'cracha-1.jpg',   title: 'Crachás',              text: 'Para empresas, eventos e escolas.' }
+      ]
+    },
+    kits: {
+      name: 'Kits e brindes',
+      cover: 'kit-empresa.jpg',
+      items: [
+        { img: 'kit-empresa.jpg', title: 'Kits para empresas',  text: 'Caneca, chaveiro e brindes com a sua marca.' },
+        { img: 'kit-01.jpg',      title: 'Kit presente',        text: 'Pronto para presentear clientes e equipe.' },
+        { img: 'bone-01.jpg',     title: 'Bonés personalizados', text: 'Bordado ou estampa, vários modelos.' }
+      ]
+    },
+    pedir: {
+      name: 'Como pedir',
+      cover: 'prova-digital.jpg',
+      items: [
+        { img: 'prova-digital.jpg', title: '1. Envie a sua ideia',  text: 'Arte pronta ou só uma ideia, nós ajudamos.' },
+        { img: 'pagamento.png',     title: '2. Aprove e pague',     text: 'Numerário, transferência ou M-Pesa.' },
+        { img: 'entrega.jpg',       title: '3. Retire ou receba',   text: 'Na loja ou entrega em Maputo e arredores.' }
+      ]
+    }
+  };
+  const SLIDE_MS = 5000;
+  const WHATSAPP = 'https://wa.me/258864952265';
+
+  const circles = document.querySelectorAll('.story-circle');
+  if (!circles.length) return;
+
+  // monta o viewer uma vez
+  const viewer = document.createElement('div');
+  viewer.className = 'story-viewer';
+  viewer.setAttribute('role', 'dialog');
+  viewer.setAttribute('aria-modal', 'true');
+  viewer.setAttribute('aria-label', 'Destaques');
+  viewer.innerHTML =
+    '<div class="story-frame">' +
+      '<img class="story-media" alt="">' +
+      '<div class="story-bars"></div>' +
+      '<div class="story-head"><img alt=""><strong></strong>' +
+        '<button class="story-close" aria-label="Fechar">&times;</button></div>' +
+      '<button class="story-tap prev" aria-label="Anterior"></button>' +
+      '<button class="story-tap next" aria-label="Próximo"></button>' +
+      '<div class="story-caption"><h3></h3><p></p>' +
+        '<a class="btn" target="_blank" rel="noopener">Pedir no WhatsApp</a></div>' +
+    '</div>';
+  document.body.appendChild(viewer);
+
+  const media = viewer.querySelector('.story-media');
+  const bars = viewer.querySelector('.story-bars');
+  const headImg = viewer.querySelector('.story-head img');
+  const headName = viewer.querySelector('.story-head strong');
+  const capTitle = viewer.querySelector('.story-caption h3');
+  const capText = viewer.querySelector('.story-caption p');
+  const capBtn = viewer.querySelector('.story-caption .btn');
+
+  let group = null, key = null, idx = 0, timer = null, startedAt = 0, lastFocus = null;
+
+  function stopTimer() { if (timer) cancelAnimationFrame(timer); timer = null; }
+
+  function show(i) {
+    stopTimer();
+    if (i < 0) i = 0;
+    if (i >= group.items.length) { close(true); return; }
+    idx = i;
+    const it = group.items[idx];
+    media.src = it.img;
+    media.alt = it.title;
+    capTitle.textContent = it.title;
+    capText.textContent = it.text;
+    capBtn.href = WHATSAPP + '?text=' + encodeURIComponent('Olá! Vi o destaque "' + it.title + '" e gostaria de um orçamento.');
+    Array.from(bars.children).forEach((b, bi) => {
+      b.classList.toggle('done', bi < idx);
+      b.firstChild.style.width = bi < idx ? '100%' : '0';
+    });
+    startedAt = performance.now();
+    const fill = bars.children[idx].firstChild;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    (function frame(now) {
+      const p = Math.min((now - startedAt) / SLIDE_MS, 1);
+      fill.style.width = (p * 100) + '%';
+      if (p >= 1) { if (!reduce) show(idx + 1); return; }
+      timer = requestAnimationFrame(frame);
+    })(startedAt);
+  }
+
+  function open(k, trigger) {
+    key = k; group = STORIES[k]; lastFocus = trigger;
+    headImg.src = group.cover;
+    headName.textContent = group.name;
+    bars.innerHTML = group.items.map(() => '<span class="story-bar"><i></i></span>').join('');
+    viewer.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    viewer.querySelector('.story-close').focus();
+    show(0);
+  }
+
+  function close(markSeen) {
+    stopTimer();
+    viewer.classList.remove('open');
+    document.body.style.overflow = '';
+    if (markSeen && key) {
+      const c = document.querySelector('.story-circle[data-story="' + key + '"]');
+      if (c) c.classList.add('seen');
+    }
+    if (lastFocus) lastFocus.focus();
+  }
+
+  circles.forEach(c => c.addEventListener('click', () => {
+    if (STORIES[c.dataset.story]) open(c.dataset.story, c);
+  }));
+  viewer.querySelector('.story-close').addEventListener('click', () => close(false));
+  viewer.querySelector('.story-tap.prev').addEventListener('click', () => show(idx - 1));
+  viewer.querySelector('.story-tap.next').addEventListener('click', () => show(idx + 1));
+  viewer.addEventListener('click', (e) => { if (e.target === viewer) close(false); });
+  document.addEventListener('keydown', (e) => {
+    if (!viewer.classList.contains('open')) return;
+    if (e.key === 'Escape') close(false);
+    if (e.key === 'ArrowRight') show(idx + 1);
+    if (e.key === 'ArrowLeft') show(idx - 1);
+  });
+})();

@@ -567,3 +567,77 @@ footer a:hover{ color:var(--cyan); }
 
 .reveal{ opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.in{ opacity:1; transform:translateY(0); }
+/* ---------- stories (círculos estilo status do WhatsApp) ---------- */
+.stories{ background:var(--paper); border-bottom:1px solid var(--line); padding:22px 0 20px; }
+.stories-list{
+  list-style:none; margin:0; padding:2px 0 4px;
+  display:flex; gap:34px; justify-content:center; justify-content:safe center;
+  overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;
+}
+.stories-list::-webkit-scrollbar{ display:none; }
+.stories-list li{ flex:none; }
+.story-circle{
+  background:none; border:none; padding:0; cursor:pointer; font:inherit; color:inherit;
+  display:flex; flex-direction:column; align-items:center; gap:12px; width:120px;
+}
+.story-ring{
+  width:108px; height:108px; border-radius:50%; padding:4px;
+  background:conic-gradient(var(--magenta), var(--yellow), var(--cyan), var(--magenta));
+  display:block; transition:transform .18s ease;
+}
+.story-ring img{
+  width:100%; height:100%; border-radius:50%; object-fit:cover;
+  border:3px solid var(--paper); background:var(--paper-2);
+}
+.story-circle:hover .story-ring{ transform:scale(1.06); }
+.story-circle.seen .story-ring{ background:#c9c6cf; }
+.story-label{
+  font-size:14px; font-weight:600; line-height:1.25; text-align:center; max-width:120px;
+}
+@media(max-width:600px){
+  .stories-list{ gap:14px; padding-left:12px; padding-right:12px; }
+  .story-ring{ width:90px; height:90px; }
+  .story-circle{ width:100px; }
+  .story-label{ font-size:13px; max-width:100px; }
+}
+
+/* viewer em tela cheia */
+.story-viewer{
+  position:fixed; inset:0; z-index:200; display:none;
+  align-items:center; justify-content:center;
+  background:rgba(19,18,20,0.94);
+}
+.story-viewer.open{ display:flex; }
+.story-frame{
+  position:relative; width:min(420px,100vw); height:min(92vh,calc(min(420px,100vw)*16/9));
+  background:#000; border-radius:16px; overflow:hidden;
+}
+@media(max-width:600px){ .story-frame{ width:100vw; height:100dvh; border-radius:0; } }
+.story-media{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.story-frame::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg, rgba(19,18,20,.55) 0%, rgba(19,18,20,0) 22%, rgba(19,18,20,0) 60%, rgba(19,18,20,.8) 100%);
+}
+.story-bars{ position:absolute; top:12px; left:12px; right:12px; display:flex; gap:4px; z-index:3; }
+.story-bar{ flex:1; height:3px; border-radius:2px; background:rgba(255,255,255,.35); overflow:hidden; }
+.story-bar i{ display:block; height:100%; width:0; background:#fff; }
+.story-bar.done i{ width:100%; }
+.story-head{
+  position:absolute; top:24px; left:14px; right:14px; z-index:3;
+  display:flex; align-items:center; gap:10px; color:#fff;
+}
+.story-head img{ width:36px; height:36px; border-radius:50%; object-fit:cover; border:2px solid #fff; }
+.story-head strong{ font-size:14px; }
+.story-close{
+  margin-left:auto; width:38px; height:38px; border-radius:50%;
+  background:rgba(247,245,240,.16); border:none; color:#fff; cursor:pointer; font-size:22px; line-height:1;
+}
+.story-caption{
+  position:absolute; left:0; right:0; bottom:0; z-index:3; color:#fff;
+  padding:24px 22px 28px;
+}
+.story-caption h3{ font-size:26px; margin-bottom:6px; }
+.story-caption p{ margin:0 0 14px; font-size:14.5px; color:rgba(247,245,240,.85); }
+.story-caption .btn{ padding:11px 20px; font-size:14px; background:#25D366; border-color:#25D366; color:#fff; }
+.story-tap{ position:absolute; top:70px; bottom:90px; width:38%; z-index:2; background:none; border:none; cursor:pointer; }
+.story-tap.prev{ left:0; } .story-tap.next{ right:0; }
